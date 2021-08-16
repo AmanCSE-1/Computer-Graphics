@@ -1,7 +1,7 @@
-#include <stdio.h>
-#include <graphics.h>
-#include <dos.h>
-#include <conio.h>
+#include <stdio.h>                              // Header file for Standard Input-Output functions
+#include <graphics.h>                           // Header file for Graphic functions
+#include <dos.h>                                // Contains delay function
+#include <conio.h>                              // For console input-output
 
 
 void midpoint(int xc, int yc, int radius){
