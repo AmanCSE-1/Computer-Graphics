@@ -1,7 +1,7 @@
-#include<stdio.h>
-#include<graphics.h>
-#include<dos.h>
-#include<conio.h>
+#include<stdio.h>             // Standard Library for input-output functions 
+#include<graphics.h>          // Library for Graphic Functions
+#include<dos.h>               // contains delay function
+#include<conio.h>             // For console input-output
 
 
 void boundaryFill4(int x, int y, int fillColor, int bColor){
