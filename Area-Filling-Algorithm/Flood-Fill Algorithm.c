@@ -37,6 +37,10 @@ int main(){
     printf("\n\nFirst Square filled by 4 connected approach");
     rectangle(150, 250, 200, 300);
     floodFill4(175, 275, 7, 0);
+    
+    printf("\n\nNext Square filled by 8 connected approach");
+    rectangle(300, 250, 350, 300);
+    floodFill8(325, 275, 9, 0);
   
     closegraph();
     return 0;
