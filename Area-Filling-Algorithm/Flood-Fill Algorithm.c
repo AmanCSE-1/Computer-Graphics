@@ -14,6 +14,21 @@ void floodFill4(int x, int y, int newColor, int oldColor){
     }
 }
 
+void floodFill8(int x, int y, int newColor, int oldColor){
+    if(getpixel(x,y) == oldColor){
+        delay(5);
+        putpixel(x, y, newColor);
+        floodFill8(x+1, y-1, newColor, oldColor);
+        floodFill8(x+1, y, newColor, oldColor);
+        floodFill8(x+1, y+1, newColor, oldColor);
+        floodFill8(x, y+1, newColor, oldColor);
+        floodFill8(x-1, y+1, newColor, oldColor);
+        floodFill8(x-1, y, newColor, oldColor);
+        floodFill8(x-1, y-1, newColor, oldColor);
+        floodFill8(x, y-1, newColor, oldColor);
+    }
+}
+
 int main(){
     int gDriver=DETECT, gMode, xc, yc, radius;
     initgraph(&gDriver, &gMode, "C:\\TURBOC3\\BGI");
