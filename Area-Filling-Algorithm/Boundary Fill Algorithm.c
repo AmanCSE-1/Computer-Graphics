@@ -4,13 +4,13 @@
 #include<conio.h>             // For console input-output
 
 
-void boundaryFill4(int x, int y, int fillColor, int bColor){
-    if(getpixel(x,y)!=bColor && getpixel(x,y)!=fillColor){
-        delay(5);
-        putpixel(x, y, fillColor);
-        boundaryFill4(x+1, y, fillColor, bColor);
+void boundaryFill4(int x, int y, int fillColor, int bColor){    // Function uses 4-connected approach 
+    if(getpixel(x,y)!=bColor && getpixel(x,y)!=fillColor){      // If current pixel as not same as Boundary-Color and Fill-Color
+        delay(5);                                               // Used for visualization of output
+        putpixel(x, y, fillColor);                              // Put pixel at (x, y) coordinate with Fill-color
+        boundaryFill4(x+1, y, fillColor, bColor);               // Recursively calling the functions
         boundaryFill4(x, y+1, fillColor, bColor);
-        boundaryFill4(x-1, y, fillColor, bColor);
+        boundaryFill4(x-1, y, fillColor, bColor);               
         boundaryFill4(x, y-1, fillColor, bColor);
     }
 }
