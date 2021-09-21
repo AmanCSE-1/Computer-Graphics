@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <stdio.h>  // Std Input-Output Library
 #include <dos.h>
 #include <graphics.h>
 #include <conio.h>
